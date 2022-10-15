@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="timer.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "poppins";
+        box-sizing: border-box;
+      }
+      .container {
+        background-image: url("assets/plain-black-.jpg");
+        /* background-image: url("https://images3.alphacoders.com/114/114807.jpg"); */
+        width: 100vw;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0 8%;
+        position: relative;
+      }
+      .logo {
+        width: 200px;
+        padding: 0;
+        cursor: pointer;
+        margin: 0;
+      }
+      .content {
+        top: 40%;
+        position: absolute;
+        transform: translateY(-50%);
+        color: #fff;
+      }
+      .content h1 {
+        font-size: 72px;
+        font-weight: 600;
+        overflow: hidden;
+        border-right: 0.15em solid orange; /* The typwriter cursor */
+        white-space: nowrap;
+        margin: 0;
+        letter-spacing: 0;
+        animation: typing 3.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
+      }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: orange;
+        }
+      }
+      .content h1 span {
+        background: -webkit-linear-gradient(left, #7209b7, #f72585, #fc8546);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .content p {
+        font-size: 27px;
+        font-weight: bold;
+      }
+      .content button {
+        background: transparent;
+        border: 2px solid white;
+        padding: 12px 25px;
+        color: whitesmoke;
+        cursor: pointer;
+        font-size: 18px;
+        margin-top: 30px;
+      }
+      .time {
+        display: flex;
+      }
+      .time div {
+        flex-basis: 100px;
+      }
+      .time div p {
+        font-size: 60px;
+        margin-bottom: -17px;
+      }
+      .time div span {
+        text-align: center;
+      }
+      .glass {
+        background-color: rgba(0, 0, 0, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="glass">
+        <div class="content">
+          <img src="assets/cynosure-tpt.png" class="logo" alt="" />
+          <p>Are you ready?</p>
+          <h1><span>Cynosure</span> is Coming Soon!</h1>
+          <div class="time">
+            <div>
+              <p id="days">00</p>
+              <span>Days</span>
+            </div>
+            <div>
+              <p id="hours">00</p>
+              <span>Hours</span>
+            </div>
+            <div>
+              <p id="mins">00</p>
+              <span>Minutes</span>
+            </div>
+            <div>
+              <p id="secs">00</p>
+              <span>Seconds</span>
+            </div>
+          </div>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
