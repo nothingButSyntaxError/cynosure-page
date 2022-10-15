@@ -85,19 +85,35 @@
       }
       .time {
         display: flex;
+        justify-content: flex-start;
       }
       .time div {
         flex-basis: 100px;
+        text-align: center;
       }
       .time div p {
         font-size: 60px;
         margin-bottom: -17px;
       }
-      .time div span {
-        text-align: center;
-      }
       .glass {
         background-color: rgba(0, 0, 0, 1);
+      }
+      @media only screen and (max-width: 768px) {
+        .content {
+          top: 30%;
+        }
+        .logo {
+          width: 160px;
+        }
+        .content h1 {
+          font-size: 45px;
+        }
+        .content p {
+          font-size: 20px;
+        }
+        .content button {
+          padding: 10px 20px;
+        }
       }
     </style>
   </head>
