@@ -36,37 +36,21 @@
         position: absolute;
         transform: translateY(-50%);
         color: #fff;
+        width: 90%;
       }
       .content h1 {
         font-size: 72px;
         font-weight: 600;
         overflow: hidden;
-        border-right: 0.15em solid orange; /* The typwriter cursor */
-        white-space: nowrap;
+        white-space: wrap;
         margin: 0;
         letter-spacing: 0;
         animation: typing 3.5s steps(40, end),
           blink-caret 0.75s step-end infinite;
       }
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-        to {
-          width: 100%;
-        }
-      }
-      @keyframes blink-caret {
-        from,
-        to {
-          border-color: transparent;
-        }
-        50% {
-          border-color: orange;
-        }
-      }
       .content h1 span {
         background: -webkit-linear-gradient(left, #7209b7, #f72585, #fc8546);
+        /* background-color: white; */
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -115,6 +99,23 @@
           padding: 10px 20px;
         }
       }
+      @media only screen and (max-width: 700px) {
+        .logo {
+          width: 140px;
+        }
+        .content h1 {
+          font-size: 35px;
+        }
+        .content {
+          top: 40%;
+        }
+        .content p {
+          font-size: 17px;
+        }
+        .time div p {
+          font-size: 40px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -123,7 +124,9 @@
         <div class="content">
           <img src="assets/cynosure-tpt.png" class="logo" alt="" />
           <p>Are you ready?</p>
-          <h1><span>Cynosure</span> is Coming Soon!</h1>
+          <h1 class="main">
+            <span class="name">Cynosure</span> is Coming Soon!
+          </h1>
           <div class="time">
             <div>
               <p id="days">00</p>
@@ -147,4 +150,24 @@
       </div>
     </section>
   </body>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script>
+    let name_ = document.querySelector(".name");
+    var typewriter = new Typewriter(name_, {
+      loop: false,
+      delay: 50,
+    });
+    typewriter.pauseFor(1000).typeString("Cynosure").start();
+    let app = document.querySelector(".main");
+    var typewriter = new Typewriter(app, {
+      loop: false,
+      delay: 50,
+    });
+    typewriter
+      .pauseFor(1000)
+      .typeString("Cynosure")
+      .pauseFor(1000)
+      .typeString(" is Coming Soon!")
+      .start();
+  </script>
 </html>
