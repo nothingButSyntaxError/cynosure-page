@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cynosure</title>
     <link rel="stylesheet" href="timer2.css" />
+    <link
+      href="https://unpkg.com/@pqina/flip/dist/flip.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
   </head>
   <body>
     <section class="content">
@@ -18,8 +23,37 @@
         </p>
       </div>
       <div class="content-right">
-        <img src="assets/cynosure-tpt.png" class="main-logo" alt="" />
+        <div class="">
+          <img src="assets/cynosure-tpt.png" class="main-logo" alt="" />
+          <div class="tick" data-value="" data-did-init="setupFlip">
+            <!-- Hide visual content from screenreaders with `aria-hidden` -->
+            <div data-repeat="true" aria-hidden="true">
+              <span data-view="flip"></span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </body>
+  <script>
+    new FlipDown(1588017373, "registerBy").start();
+    function setupFlip(tick) {
+      let countDownDate = new Date("Nov 19, 2022 00:00:00").getTime();
+      let now = new Date().getTime();
+      let diff = countDownDate - now;
+      let days = Math.floor(diff / (1000 * 24 * 60 * 60));
+      let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      let secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      tick.value = secs;
+      Tick.helper.interval(function () {
+        tick.value--;
+
+        // Set `aria-label` attribute which screenreaders will read instead of HTML content
+        tick.root.setAttribute("aria-label", tick.value);
+      }, 1000);
+    }
+    setupFlip();
+  </script>
 </html>
