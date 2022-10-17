@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #010133, #000219);
+  height: 100vh;
+  width: 100vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.content-left {
+  padding: 70px;
+  padding-left: 100px;
+}
+
+.school-logo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 6rem;
+}
+
+.main-head {
+  font-family: "Poppins", sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  color: #f1f1f1;
+}
+
+.main-head span {
+  background: -webkit-linear-gradient(left, #7209b7, #f72585, #fc8546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content-left p {
+  margin-top: 15px;
+  color: #f1f1f1;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.content-left p span {
+  color: #fce056;
+}
+
+.content-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
+  padding-top: 3.5%;
+}
+
+.main-logo {
+  width: 40rem;
+  height: 40rem;
+}
