@@ -15,20 +15,82 @@
   <body>
     <section class="content">
       <div class="content-left">
-        <img src="assets/school.png" alt="" class="school-logo" />
-        <h1 class="main-head"><span>Cynosure</span>. Coming Soon...</h1>
+        <div class="top-logos">
+          <img src="assets/school.png" alt="" class="school-logo" />
+          <img src="assets/cynosure-tpt.png" alt="" />
+        </div>
+        <h1 class="main-head"><span>Cynosure</span> Coming Soon...</h1>
         <p>
           The first edition of Cynosure is here!<br />
           Coming soon on <span>19th</span> and <span>20th</span> November.
         </p>
+        <div class="btns">
+          <div class="register-btn">
+            <h3>Register School</h3>
+          </div>
+          <div class="register-btn_">
+            <h3>Register Yourself</h3>
+          </div>
+        </div>
+        <div class="time-left">
+          <div>
+            <p id="days">00</p>
+          </div>
+          <h3>:</h3>
+          <div>
+            <p id="hours">00</p>
+          </div>
+          <h3>:</h3>
+          <div>
+            <p id="mins">00</p>
+          </div>
+          <h3>:</h3>
+          <div>
+            <p id="secs">00</p>
+          </div>
+        </div>
       </div>
       <div class="content-right">
-        <div class="">
+        <div>
           <img src="assets/cynosure-tpt.png" class="main-logo" alt="" />
-          <div class="tick" data-value="" data-did-init="setupFlip">
-            <!-- Hide visual content from screenreaders with `aria-hidden` -->
-            <div data-repeat="true" aria-hidden="true">
-              <span data-view="flip"></span>
+          <!-- <div class="tick" data-did-init="handleTickInit"> 
+              <div
+                data-repeat="true"
+                data-layout="horizontal center fit"
+                data-transform="preset(d, h, m, s) -> delay"
+              >
+                <div class="tick-group">
+                  <div
+                    data-key="value"
+                    data-repeat="true"
+                    data-transform="pad(00) -> split -> delay"
+                  >
+                    <span data-view="flip"></span>
+                  </div>
+                  <br />
+                  <span data-key="label" data-view="text" class="tick-label">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div>
+            <div class="time">
+              <div>
+                <p id="days_">00</p>
+              </div>
+              <h3>:</h3>
+              <div>
+                <p id="hours_">00</p>
+              </div>
+              <h3>:</h3>
+              <div>
+                <p id="mins_">00</p>
+              </div>
+              <h3>:</h3>
+              <div>
+                <p id="secs_">00</p>
+              </div>
             </div>
           </div>
         </div>
@@ -36,24 +98,49 @@
     </section>
   </body>
   <script>
-    new FlipDown(1588017373, "registerBy").start();
-    function setupFlip(tick) {
+    document.addEventListener("DOMContentLoaded", () => {
       let countDownDate = new Date("Nov 19, 2022 00:00:00").getTime();
-      let now = new Date().getTime();
-      let diff = countDownDate - now;
-      let days = Math.floor(diff / (1000 * 24 * 60 * 60));
-      let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      let mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      let secs = Math.floor((diff % (1000 * 60)) / 1000);
-
-      tick.value = secs;
-      Tick.helper.interval(function () {
-        tick.value--;
-
-        // Set `aria-label` attribute which screenreaders will read instead of HTML content
-        tick.root.setAttribute("aria-label", tick.value);
+      var x = setInterval(function () {
+        let now = new Date().getTime();
+        let diff = countDownDate - now;
+        let days = Math.floor(diff / (1000 * 24 * 60 * 60));
+        let hours = Math.floor(
+          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        let mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        let secs = Math.floor((diff % (1000 * 60)) / 1000);
+        if (secs < 0) {
+          days = 0;
+          hours = 0;
+          mins = 0;
+          secs = 0;
+        }
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("mins").innerHTML = mins;
+        document.getElementById("secs").innerHTML = secs;
+        document.getElementById("days_").innerHTML = days;
+        document.getElementById("hours_").innerHTML = hours;
+        document.getElementById("mins_").innerHTML = mins;
+        document.getElementById("secs_").innerHTML = secs;
       }, 1000);
-    }
-    setupFlip();
+
+      document.querySelector(".register-btn").onclick = () => {
+        document.location.href =
+          "https://docs.google.com/forms/d/197X7VwulHik1tY9q7x_dePmS0rN8KNOqzKGJqWRQosc/edit?pli=1";
+      };
+      document.querySelector(".register-btn_").onclick = () => {
+        document.location.href =
+          "https://docs.google.com/forms/d/1ApajsEA_cs5A-gXgkAo6evvZse1vbrDN6rLfjCdh_BY/edit?ts=634067cb";
+      };
+    });
+
+    // function handleTickInit(tick) {
+    //   var nextYear = new Date().getFullYear() + 1;
+
+    //   Tick.count.down(nextYear + "-01-01").onupdate = function (value) {
+    //     tick.value = value;
+    //   };
+    // }
   </script>
 </html>
