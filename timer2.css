@@ -259,8 +259,8 @@ body {
     padding-left: 30px;
   }
   .school-logo {
-    width: 140px;
-    height: 140px;
+    width: 110px;
+    height: 110px;
     margin-bottom: 2rem;
   }
   .main-head {
@@ -305,5 +305,11 @@ body {
   .time-left h3 {
     font-size: 45px;
     margin-top: 10px;
+  }
+  .top-logos img:nth-child(2) {
+    display: inline-flex;
+    margin-top: 7px;
+    width: 180px;
+    height: 180px;
   }
 }
