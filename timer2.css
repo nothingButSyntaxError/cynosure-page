@@ -37,6 +37,7 @@ body {
 
 .main-head span {
   background: -webkit-linear-gradient(left, #7209b7, #f72585, #fc8546);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -132,6 +133,7 @@ body {
 .time-left {
   display: none;
   margin-top: 20px;
+  /* border: 1px solid pink; */
 }
 
 .time-left div {
@@ -296,14 +298,14 @@ body {
     display: none;
   }
   .time-left div p {
-    font-size: 45px;
+    font-size: 40px;
     margin-bottom: -17px;
     color: #b0b1c0;
     font-weight: 600;
   }
 
   .time-left h3 {
-    font-size: 45px;
+    font-size: 40px;
     margin-top: 10px;
   }
   .top-logos img:nth-child(2) {
