@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+body {background-color: #131a1c;}
+.event{
+  margin-top: 50px;
+  margin-left: 13px;
+  border: 2px solid;
+  height: 700px;
+  width: 1410px;
+}
