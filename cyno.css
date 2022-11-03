@@ -1,9 +1,140 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 body {background-color: #131a1c;}
 .event{
-  margin-top: 50px;
+  margin-top: 0px;
   margin-left: 13px;
   border: 2px solid;
-  height: 700px;
-  width: 1410px;
+
+}
+
+.header-l i {
+  color: bisque;
+  font-size: 2rem;
+}
+.header-l {
+  flex: 1;
+  display: flex;
+  justify-content: left;
+}
+.header {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 30px;
+  height: 50px;
+  margin-top: 10px;
+}
+.header-l img {
+  display: none;
+}
+
+.header-mid {
+  display: none;
+}
+.header-r {
+  display: none;
+}
+@media only screen and (min-width: 760px){
+  .header {
+    margin-top: 0px;
+    width: 100vw;
+    padding: 0px 10px;
+    margin-bottom: 20px;
+  }
+  #ham {
+    display: none;
+  }
+  .header-l img {
+    display: inline;
+  }
+  .header-mid {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2.2rem;
+  }
+  .header-mid h3 {
+    color: bisque;
+    font-size: 23px;
+  }
+  .header-mid i {
+    color: bisque;
+    font-size: 21px;
+    margin: 0 20px 0 5px;
+  }
+  .header-r {
+    display: inline;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 1.3rem;
+  }
+  .register-btn {
+    background-color: bisque;
+    color: #131a1c;
+    align-items: center;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .register-btn:hover {
+    background-color: #131a1c;
+    color: bisque;
+  }
+  .register-btn:active {
+    outline: none;
+  }
+}
+@media only screen and (min-width: 1200px){
+  .header {
+    margin-bottom: 40px;
+    margin-top: 10px;
+    width: 90vw;
+  }
+  .hamburger {
+    display: none;
+  }
+  .header-l img {
+    width: 100px;
+    height: 100px;
+  }
+  .header-mid {
+    margin-top: 3.5rem;
+  }
+  .header-mid h3 {
+    color: bisque;
+    font-size: 27px;
+  }
+  .header-mid i {
+    color: bisque;
+    font-size: 23px;
+    margin: 0 30px 0 7px;
+  }
+  .register-btn {
+    background-color: bisque;
+    color: #131a1c;
+    align-items: center;
+    padding-bottom: 40px;
+    padding-top: 5px;
+    padding-right: 25px;
+    padding-left: 25px;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  
+  }
 }
