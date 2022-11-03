@@ -16,6 +16,14 @@
   height: 50px;
 }
 
+.drop-1 ul li {
+  border: 1px solid black;
+  background-color: wheat;
+  text-decoration: none;
+  padding: 5px;
+  display: none;
+}
+
 .nav-logo {
   display: none;
 }
@@ -37,7 +45,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  /* background: linear-gradient(45deg, #8704fb, #18fcf5); */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #09698d, #23d5ab);
 }
 
 .main {
@@ -114,8 +123,6 @@
 
 .main-head h2 span {
   background: -webkit-linear-gradient(left, #f72585, #fc8546);
-
-  /* background-color: #131a1c; */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -167,7 +174,84 @@
   display: none;
 }
 
+.principal-note {
+  background-color: #131a1c;
+  padding: 5% 7%;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.principal-note h2 {
+  color: bisque;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+  background: #23292b;
+  padding: 10px 5px;
+  border-radius: 10px;
+}
+.principal-note h2:nth-child(6) {
+  background-color: bisque;
+  color: #131a1c;
+}
+.principal-note img:nth-child(1) {
+  margin-bottom: 0;
+}
+
+.map {
+  background-color: #131a1c;
+  padding: 5%;
+  padding-top: 50px;
+  border-top: 3px solid wheat;
+}
+
+.map h1 {
+  color: wheat;
+  text-align: center;
+  text-decoration: underline;
+}
+iframe {
+  height: 500px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.copyright {
+  padding: 0.3em 1em;
+  background-color: #25262e;
+}
+.footer-menu {
+  float: left;
+  margin-top: 10px;
+}
+
+.footer-menu a {
+  color: #cfd2d6;
+  background-color: #25262e;
+  padding: 6px;
+
+  text-decoration: none;
+}
+.footer-menu a:hover {
+  color: #27bcda;
+}
+.copyright p {
+  font-size: 0.9em;
+  text-align: right;
+}
+
 @media only screen and (min-width: 760px) {
+  .principal-note {
+    padding: 7% 9%;
+    padding-top: 0;
+  }
+  .principal-note h2 {
+    font-size: 16px;
+  }
   .logo {
     height: 215px;
     width: 215px;
@@ -266,6 +350,13 @@
 }
 
 @media only screen and (min-width: 1200px) {
+  .principal-note {
+    padding: 5% 12%;
+    padding-top: 0;
+  }
+  .principal-note h2 {
+    font-size: 22px;
+  }
   .logo {
     margin-top: 10px;
     height: 240px;
