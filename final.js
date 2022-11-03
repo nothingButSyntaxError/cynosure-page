@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
   });
 
+  document.querySelector("register-btn").onclick = () => {
+    window.location.href =
+      "https://docs.google.com/forms/d/197X7VwulHik1tY9q7x_dePmS0rN8KNOqzKGJqWRQosc/edit?pli=1";
+  };
   // also activate menu when logo is clicked
 
   document.querySelector(".hamburger").onclick = function () {
