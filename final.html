@@ -15,11 +15,6 @@
     />
     <title>Cynosure</title>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        AOS.init();
-      });
-    </script>
   </head>
   <body>
     <div class="content">
@@ -29,18 +24,37 @@
           <img src="assets/school.png" height="75" width="75" alt="" />
         </div>
         <div class="header-mid">
-          <h3 class="drop-1-active">
-            <a
-              style="text-decoration: none; color: bisque"
-              href="https://cynosurestghs.com/juniorcyno.html"
-              >Events</a
-            >
-          </h3>
-          <i class="fa-solid fa-caret-down"></i>
-          <h3 style="margin-right: 20px">About</h3>
-          <h3>Teams</h3>
-          <i class="fa-solid fa-caret-down"></i>
-          <h3>Contact</h3>
+          <div class="dropdown">
+            <button class="dropdown__hover">
+              Events <i class="fa-solid fa-caret-down"></i>
+            </button>
+            <div class="dropdown__menu">
+              <a href="#">Junior Cynosure</a>
+              <a href="#">Cynoshow</a>
+              <a href="#">Literary Events</a>
+              <a href="#">Commerce Events</a>
+              <a href="#">Performing Arts</a>
+              <a href="#">Fine Arts</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown__hover">
+              Teams <i class="fa-solid fa-caret-down"></i>
+            </button>
+            <div class="dropdown__menu">
+              <a href="#">Core Team</a>
+              <a href="#">Executive Team</a>
+              <a href="#">Marketing Team</a>
+              <a href="#">Admin Team</a>
+              <a href="#">Junior Cynosure</a>
+              <a href="#">Cynoshow</a>
+              <a href="#">Literary Events</a>
+              <a href="#">Commerce Events</a>
+              <a href="#">Performing Arts</a>
+              <a href="#">Fine Arts</a>
+            </div>
+          </div>
+          <h3 class="contact-link">Contact</h3>
         </div>
         <div class="header-r">
           <button class="register-btn">Register</button>
@@ -112,6 +126,43 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
+    <div class="contact">
+      <h3>GET IN TOUCH</h3>
+      <p>Get in touch with us for more information or queries.</p>
+      <form action="" class="contact-form">
+        <div>
+          <label for="">Name</label>
+          <br />
+          <input type="text " class="name" placeholder="eg. John Smith" />
+        </div>
+        <div>
+          <label for="">Email</label>
+          <br />
+          <input
+            type="text"
+            class="email"
+            placeholder="eg. johnsmith@example.com"
+          />
+        </div>
+        <div>
+          <label for="">Subject</label>
+          <br />
+          <input
+            type="text"
+            class="subject"
+            placeholder="eg. I wanted to ask about Cynosure"
+          />
+        </div>
+        <div>
+          <label for="">Message</label>
+          <br />
+          <textarea class="message"></textarea>
+        </div>
+        <div>
+          <button class="submit-contact">SUBMIT</button>
+        </div>
+      </form>
+    </div>
     <div id="menu-overlay-mob">
       <img
         src="assets/cynosure-tpt.png"
@@ -129,5 +180,16 @@
       </ul>
     </div>
   </body>
+  <script>
+    document.querySelector(".submit-contact").onclick = (e) => {
+      e.preventDefault();
+      let message = document.querySelector(".message").value;
+      let name = document.querySelector(".name").value;
+      let email = document.querySelector(".email").value;
+      let subject = document.querySelector(".subject").value;
+      let content = message + "\n" + name + "\n" + email;
+      window.location.href = `mailto:events@cynosurestghs.com?subject=${subject}&body=${content}`;
+    };
+  </script>
   <script defer src="final.js"></script>
 </html>
