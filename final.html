@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="final.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -13,6 +14,7 @@
       referrerpolicy="no-referrer"
     />
     <title>Cynosure</title>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </head>
   <body>
     <div class="content">
@@ -22,12 +24,30 @@
           <img src="assets/school.png" height="75" width="75" alt="" />
         </div>
         <div class="header-mid">
-          <h3>Events</h3>
-          <i class="fa-solid fa-caret-down"></i>
-          <h3 style="margin-right: 20px">About</h3>
-          <h3>Teams</h3>
-          <i class="fa-solid fa-caret-down"></i>
-          <h3>Contact</h3>
+          <div class="dropdown">
+            <button class="dropdown__hover">
+              Events <i class="fa-solid fa-caret-down"></i>
+            </button>
+            <div class="dropdown__menu">
+              <a href="juniorcyno.html">Junior Cynosure</a>
+              <a href="misc.html">Cynoshow</a>
+              <a href="literary.html">Literary Events</a>
+              <a href="commerce.html">Commerce Events</a>
+              <a href="performingarts.html">Performing Arts</a>
+              <a href="finearts.html">Fine Arts</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown__hover">
+              Teams <i class="fa-solid fa-caret-down"></i>
+            </button>
+            <div class="dropdown__menu">
+              <a href="core.html">Core Team</a>
+              <a href="exec.html">Executive Team</a>
+              <a href="planning.html">Planning Team</a>
+            </div>
+          </div>
+          <h3 class="contact-link">Contact</h3>
         </div>
         <div class="header-r">
           <button class="register-btn">Register</button>
@@ -40,20 +60,103 @@
         class="logo layer"
       />
       <div class="main-head">
-        <h2 class="layer"><span>Cynosure</span>. The Mega Event is Here!</h2>
+        <!-- have to add br tag -->
+        <h2 class="layer"><span>Cynosure</span> The Mega Event is Here!</h2>
         <p>A St. Gregorios High School Event.</p>
         <div class="socials-icons">
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-google"></i>
+          <a href="https://www.instagram.com/cynosure.stghs/">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="mailto:events@cynosurestghs.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
         </div>
       </div>
       <div class="banner-scroll-div">
         <i class="fa-solid fa-chevron-down"></i>
       </div>
     </div>
-    <div class="principal-note"></div>
+    <div class="principal-note">
+      <img src="assets/layers.svg" alt="" class="layers" />
+      <img src="assets/principal.png" alt="" height="30%" width="30%" />
+      <h2>
+        We cordially invite you to participate in the first edition of our
+        student-powered inter-school event ‘CYNOSURE’ , to be held on 19th and
+        20th November, 2022. Through this event, we hope to give the
+        participants an opportunity to be the center of attention at the
+        repertoire of uniquely crafted activities. At St. Gregorios High School,
+        we have always encouraged our students to look beyond the realm of pure
+        academics. Our pool of talented students has come up with an array of
+        ingeniously designed events, ranging from Literary to Fine Arts to
+        Sports, that are bound to appeal to the particular age group for which
+        they have been curated. The logo for Cynosure symbolizes the concept of
+        all eyes being on ‘YOU’ at the event.
+      </h2>
+      <h2>
+        The Cynosure Website contains a description of all events along with
+        their rules and regulations. It can also be accessed on our event
+        Instagram page @cynosure.stghs
+      </h2>
+      <h2>
+        Meadows trim with daisies pied,<br />
+        Shallow brooks and rivers wide,<br />
+        Towers and battlements it sees, <br />Bosom'd high in tufted trees,
+        <br />
+        Where perhaps some beauty lies, <br />The cynosure of neighboring eyes.
+        <br /><span>- John Milton</span>
+      </h2>
+      <h2>Sarah D’Souza<br />Principal, St. Gregorios High School</h2>
+    </div>
+    <div class="map">
+      <h1>ST. GREGORIOS HIGH SCHOOL</h1>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.3124446405764!2d72.90040221525543!3d19.04999558710289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c61d34555555%3A0x8c85c263ef023923!2sSt.%20Gregorios%20High%20School!5e0!3m2!1sen!2sin!4v1667506954995!5m2!1sen!2sin"
+        style="border: 0"
+        allowfullscreen="false"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <div class="contact">
+      <h3>GET IN TOUCH</h3>
+      <p>Get in touch with us for more information or queries.</p>
+      <form action="" class="contact-form">
+        <div>
+          <label for="">Name</label>
+          <br />
+          <input type="text " class="name" placeholder="eg. John Smith" />
+        </div>
+        <div>
+          <label for="">Email</label>
+          <br />
+          <input
+            type="text"
+            class="email"
+            placeholder="eg. johnsmith@example.com"
+          />
+        </div>
+        <div>
+          <label for="">Subject</label>
+          <br />
+          <input
+            type="text"
+            class="subject"
+            placeholder="eg. I wanted to ask about Cynosure"
+          />
+        </div>
+        <div>
+          <label for="">Message</label>
+          <br />
+          <textarea class="message"></textarea>
+        </div>
+        <div>
+          <button class="submit-contact">SUBMIT</button>
+        </div>
+      </form>
+    </div>
     <div id="menu-overlay-mob">
       <img
         src="assets/cynosure-tpt.png"
@@ -71,5 +174,22 @@
       </ul>
     </div>
   </body>
+  <script>
+    document.querySelector(".submit-contact").onclick = (e) => {
+      e.preventDefault();
+      let message = document.querySelector(".message").value;
+      let name = document.querySelector(".name").value;
+      let email = document.querySelector(".email").value;
+      let subject = document.querySelector(".subject").value;
+      let content = message + "\n" + name + "\n" + email;
+      window.location.href = `mailto:events@cynosurestghs.com?subject=${subject}&body=${content}`;
+    };
+    document.querySelector(".hamburger").onclick = function () {
+      document.getElementById("menu-overlay-mob").classList.toggle("active");
+    };
+    document.querySelector(".logo-menu").onclick = function () {
+      document.getElementById("menu-overlay-mob").classList.toggle("active");
+    };
+  </script>
   <script defer src="final.js"></script>
 </html>
