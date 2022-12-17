@@ -47,10 +47,11 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   /* background: linear-gradient(45deg, #8704fb, #18fcf5); */
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #09698d, #23d5ab);
+  padding-top: 5%;
 }
 
 .main {

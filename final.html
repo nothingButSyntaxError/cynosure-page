@@ -50,7 +50,8 @@
           <h3 class="contact-link">Contact</h3>
         </div>
         <div class="header-r">
-          <button class="register-btn">Register</button>
+            <button class="register-btn">Register</button>
+          </a>
         </div>
       </div>
       <img
@@ -74,9 +75,6 @@
             <i class="fa-brands fa-facebook"></i>
           </a>
         </div>
-      </div>
-      <div class="banner-scroll-div">
-        <i class="fa-solid fa-chevron-down"></i>
       </div>
     </div>
     <div class="principal-note">
@@ -175,6 +173,10 @@
     </div>
   </body>
   <script>
+    document.querySelector(".register-btn").onclick = () => {
+        document.location.href =
+          "https://docs.google.com/forms/d/197X7VwulHik1tY9q7x_dePmS0rN8KNOqzKGJqWRQosc/edit?pli=1";
+      };
     document.querySelector(".submit-contact").onclick = (e) => {
       e.preventDefault();
       let message = document.querySelector(".message").value;
